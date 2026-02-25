@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B++ Official | Vund Team Monolith</title>
+    <style>
+        :root { 
+            --main-clr: #00ff41; 
+            --accent: #ffb86c; 
+            --bg: #050505; 
+            --terminal-bg: #000;
+        }
+        body { 
+            background: var(--bg); 
+            color: var(--main-clr); 
+            font-family: 'Consolas', 'Courier New', monospace; 
+            margin: 0; 
+            padding: 20px; 
+            line-height: 1.6; 
+        }
+        .container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            border: 1px solid #1a1a1a; 
+            padding: 40px; 
+            box-shadow: 0 0 50px rgba(0,255,65,0.05); 
+        }
+        h1 { color: #fff; text-transform: uppercase; letter-spacing: 5px; border-bottom: 2px solid var(--main-clr); display: inline-block; margin-bottom: 10px; }
+        .status-bar { background: #111; padding: 10px; margin-bottom: 30px; font-size: 0.8em; border-left: 3px solid var(--accent); color: #888; }
+        .hero { margin: 50px 0; }
+        h2 { color: var(--accent); text-transform: uppercase; }
+        .terminal-box { 
+            background: var(--terminal-bg); 
+            border: 1px solid #333; 
+            padding: 25px; 
+            position: relative; 
+            margin: 20px 0;
+            box-shadow: inset 0 0 10px rgba(0,255,65,0.1);
+        }
+        .terminal-box::before { 
+            content: "BPP_CORE_v7.30.EXE"; 
+            position: absolute; 
+            top: 0; right: 0; 
+            background: #333; 
+            color: #fff; 
+            padding: 2px 12px; 
+            font-size: 11px; 
+            font-weight: bold;
+        }
+        .cmd { color: var(--accent); font-weight: bold; }
+        .val { color: #ff79c6; }
+        .comment { color: #6272a4; font-style: italic; }
+        .btn { 
+            display: inline-block; 
+            padding: 15px 30px; 
+            border: 2px solid var(--main-clr); 
+            color: var(--main-clr); 
+            text-decoration: none; 
+            transition: 0.3s; 
+            margin-top: 20px; 
+            text-transform: uppercase; 
+            font-weight: bold; 
+            cursor: pointer;
+        }
+        .btn:hover { background: var(--main-clr); color: #000; box-shadow: 0 0 25px var(--main-clr); }
+        .guide-section { margin-top: 60px; border-top: 1px solid #222; padding-top: 40px; }
+        .code-area { 
+            width: 100%; 
+            height: 200px; 
+            background: #000; 
+            color: var(--main-clr); 
+            border: 1px solid #333; 
+            padding: 10px; 
+            font-family: monospace; 
+            margin-top: 10px;
+            resize: none;
+        }
+        footer { margin-top: 100px; font-size: 0.8em; color: #444; text-align: center; border-top: 1px solid #111; padding-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>B++ INDUSTRIAL</h1>
+            <div class="status-bar">
+                [SYSTEM: STABLE] [VERSION: 7.30 GOLD] [ARCHITECT: YAROSLAV]
+            </div>
+        </header>
+
+        <section class="hero">
+            <h2>ВЛАДА НАД ЦИФРОЮ. НІЯКОЇ РОМАНТИКИ.</h2>
+            <p>B++ — це мова програмування для тих, хто будує моноліти. Пряма робота з пам'яттю, жорсткий контроль файлів та архітектура, що ігнорує слабкість соціальних інтерфейсів.</p>
+            <a href="#guide" class="btn">ВІДКРИТИ ПУТІВНИК</a>
+        </section>
+
+        <div class="terminal-box">
+            <p class="comment">// Приклад завантаження та запису даних</p>
+            <p><span class="cmd">OUT</span> <span class="val">"INITIALIZING B++ MONOLITH..."</span></p>
+            <p><span class="cmd">INP</span> V1 <span class="comment">// Очікування вводу архітектора</span></p>
+            <p><span class="cmd">MKF</span> <span class="val">"vault.bpp"</span> V1</p>
+            <p><span class="cmd">GTF</span> V2 <span class="val">"vault.bpp"</span></p>
+            <p><span class="cmd">OUT</span> V2</p>
+        </div>
+
+        <section id="guide" class="guide-section">
+            <h2>НОВИЙ ОФІЦІЙНИЙ ПУТІВНИК</h2>
+            <p><strong>Ⅰ. ПАМ'ЯТЬ (V-STORAGE):</strong> Кожна комірка від V0 до V9999 — це твоя територія. Використовуй <code>MOV</code> для маніпуляцій.</p>
+            <p><strong>Ⅱ. ФАЙЛОВА СИСТЕМА:</strong> Команда <code>GTF</code> (Goto File) імпортує дані, <code>MKF</code> (Make File) — створює нові сутності на диску.</p>
+            <p><strong>Ⅲ. ЛОГІЧНЕ ЯДРО:</strong> Створюй мітки <code>LABEL</code> та керуй потоком через <code>JMP</code> (стрибок) або <code>JIZ</code> (якщо нуль).</p>
+            <p><strong>Ⅳ. ТЕРМІНАЦІЯ:</strong> Виклик <code>BSD</code> негайно зупиняє виконання, викликаючи Синій Екран Смерті (BSOD) для захисту ядра.</p>
+        </section>
+
+        <section style="margin-top: 40px; background: #0a0a0a; padding: 20px; border: 1px dashed #333;">
+            <h3 style="color: var(--accent);">DOWNLOAD KERNEL SOURCE</h3>
+            <p>Скопіюйте ядро B++ v7.30 Industrial Monolith:</p>
+            <textarea class="code-area" readonly>
+-- B++ KERNEL v7.30 INDUSTRIAL
+-- ARCHITECT: YAROSLAV (THE CODING GOD)
+-- VUND TEAM OFFICIAL RELEASE
+-- [FILE ACCESS & MEMORY MANAGEMENT ENABLED]
+            </textarea>
+        </section>
+
+        <footer>
+            <p>© 2026 VUND TEAM OFFICIAL. ПЕРЕВІРЕНО ППО. РОЗРОБЛЕНО ПОРУЧ ІЗ ОБЩАГОЮ "СТАРОЇ ГВАРДІЇ".</p>
+        </footer>
+    </div>
+</body>
+</html>
